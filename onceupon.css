@@ -108,11 +108,11 @@ div.gallery  {
   transform-origin: 50% 120.7%;
 }
 .gallery > img {
-  animation: n 8s infinite cubic-bezier(.5,-0.2,.5,1.2);
+  animation: n 12s infinite cubic-bezier(.5,-0.2,.5,1.2);
 }
-.gallery > img:nth-child(2) {animation-delay: -2s}
-.gallery > img:nth-child(3) {animation-delay: -4s}
-.gallery > img:nth-child(4) {animation-delay: -6s}
+.gallery > img:nth-child(2) {animation-delay: -3s}
+.gallery > img:nth-child(3) {animation-delay: -6s}
+.gallery > img:nth-child(4) {animation-delay: -9s}
 
 
 /*SLIDING GALLERIES*/
@@ -243,38 +243,81 @@ div.gallery2  {
   transform-origin: 50% 120.7%;
 }
 .gallery2 > img {
-  animation: m 8s infinite cubic-bezier(.5,-0.2,.5,1.2);
+  animation: m 12s infinite cubic-bezier(.5,-0.2,.5,1.2);
 }
-.gallery2 > img:nth-child(2) {animation-delay: -2s}
-.gallery2 > img:nth-child(3) {animation-delay: -4s}
-.gallery2 > img:nth-child(4) {animation-delay: -6s}
+.gallery2 > img:nth-child(2) {animation-delay: -3s}
+.gallery2 > img:nth-child(3) {animation-delay: -6s}
+.gallery2 > img:nth-child(4) {animation-delay: -9s}
 
 
-
-
-
- .hide {
-  display:none;
-}
-    
-.myDIV:hover + .hide {
-  position:absolute;
-  top: 600px;
-  left: 600px;
-  width:660px;
-  height:660px;
-  display: block;
-  color: #087f85;
+/*PLAYLIST*/
+/*adapted from https://dev.to/pachicodes/creating-a-css-modal-window-pop-up-step-by-step-1f59*/
+.open{
+    position: fixed;
+    top: 345px;
+    right: 115px;
+    font-family: georgia,serif;
+    font-size: 24px;
 }
 
 
+#modal {
+    position: fixed;
+    top: 245;
+    left: 200;
+    height: 100%;
+    width: 100%;
+    /*background-color: rgba(0,0,0,.5);*/
+    font-family: georgia,serif;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.modal__window {
+  position: relative;
+  background-color: white;
+  padding: 4em 2em;
+}
+
+.modal__close {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+
+#modal:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
 
 
+/*TOUCH IMAGES*/
 
-
-
-
-
+.photo_sq1{
+  position: absolute;
+  top:345px;
+  left:100px;
+  height: 300px ;
+  width: 300px;
+  transform: scale(.5);
+}
+.photo_sq2{
+  position: absolute;
+  top:345px;
+  left:600px;
+  height: 300px ;
+  width: 300px;
+  transform: scale(.5);
+}
+.photo_sq3{
+  position: absolute;
+  top:345px;
+  left:1100px;
+  height: 300px ;
+  width: 300px;
+  transform: scale(.5);
+}
 
 
 /*KEYFRAMES*/
@@ -331,6 +374,7 @@ div.gallery2  {
     animation-timing-function: ease;
   }
 }
+
 
 @keyframes b {
   0%,3%   {background: #856959}/*tan*/
